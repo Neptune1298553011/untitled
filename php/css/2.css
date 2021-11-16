@@ -1,0 +1,76 @@
+
+*{padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{text-decoration: none;}
+
+ol,ul{list-style: none}
+
+
+#\#nav-header a,#\#nav-header a:link,#nav-header a:visited{
+    color: #666;
+    text-decoration: none;
+    font-size: 100px;
+    font-weight: 500;
+    font-family: "Microsoft Yahei";
+}
+
+#nav-header a,:hover,
+#nav-header nav li:hover{
+    color: rgb(238, 92, 66);
+
+}
+
+#nav-header{
+    background-color: #fff;
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+
+
+
+#nav-header.fixed{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+
+}
+
+#nav-header .header{
+    width: 2600px;
+    margin: 0 auto;
+}
+
+#nav-header .header .logo {
+    width: 100px;
+    margin-top: 5px;
+    float: left;
+    margin-right: 30px;
+}
+
+#nav-header .header .logo img{
+    display: block;
+    height: 600px;
+}
+
+#nav-header .header  nav{
+    width: 490px;
+    display: inline-block;
+    border: 1px red solid;
+}
+#nav-header .header nav li{
+    color: #666;
+    font-size: 100px;
+    text-decoration: none;
+    list-style: none;
+    line-height: 69px;
+    padding-right: 28px;
+    display: inline;
+    position: relative;
+    cursor: pointer;
+}
