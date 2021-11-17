@@ -1,3 +1,205 @@
+<?php
+function conn(){
+    $servername = "localhost:3306";
+    $username = "admin";
+    $password = "123456";
+    $dbname = "igg";
+
+// 创建连接
+    $conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+    if ($conn->connect_error) {
+        die("连接失败: " . $conn->connect_error);
+    }
+return $conn;
+}
+$conn=conn();
+$sql = "SELECT * FROM product_information ";
+$zsresult = $conn->query($sql);
+$conn->close();
+?>
+<?php
+$conn=conn();
+
+$sql = "SELECT product_price  FROM product_information where id='1'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // 输出数据
+    while($row = $result->fetch_assoc()) {
+        $b=$row['product_price'];
+    }
+} else {
+    echo "0 结果";
+}
+$conn->close();
+?>
+<?php
+$conn=conn();
+
+$sql = "SELECT product_name  FROM product_information where id='2'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // 输出数据
+    while($row = $result->fetch_assoc()) {
+        $c=$row['product_name'];
+    }
+} else {
+    echo "0 结果";
+}
+$conn->close();
+?>
+
+<?php
+$conn=conn();
+
+
+$sql = "SELECT product_price  FROM product_information where id='2'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // 输出数据
+    while($row = $result->fetch_assoc()) {
+        $d=$row['product_price'];
+    }
+} else {
+    echo "0 结果";
+}
+$conn->close();
+?>
+
+<?php
+$conn=conn();
+
+$sql = "SELECT product_name  FROM product_information where id='3'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // 输出数据
+    while($row = $result->fetch_assoc()) {
+        $e=$row['product_name'];
+    }
+} else {
+    echo "0 结果";
+}
+$conn->cl
+?>
+
+<?php
+$conn=conn();
+
+
+$sql = "SELECT product_price  FROM product_information where id='3'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // 输出数据
+    while($row = $result->fetch_assoc()) {
+        $f=$row['product_price'];
+    }
+} else {
+    echo "0 结果";
+}
+$conn->close();
+?>
+
+<?php
+$conn=conn();
+
+
+$sql = "SELECT product_name  FROM product_information where id='4'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // 输出数据
+    while($row = $result->fetch_assoc()) {
+        $g=$row['product_name'];
+    }
+} else {
+    echo "0 结果";
+}
+$conn->close()
+?>
+<?php
+$conn=conn();
+
+$sql = "SELECT product_price  FROM product_information where id='4'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // 输出数据
+    while($row = $result->fetch_assoc()) {
+        $h=$row['product_price'];
+    }
+} else {
+    echo "0 结果";
+}
+$conn->close();
+?>
+<?php
+$conn=conn();
+
+$sql = "SELECT product_name  FROM product_information where id='5'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // 输出数据
+    while($row = $result->fetch_assoc()) {
+        $i=$row['product_name'];
+    }
+} else {
+    echo "0 结果";
+}
+$conn->close()
+?>
+<?php
+$conn=conn();
+$sql = "SELECT product_price  FROM product_information where id='5'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // 输出数据
+    while($row = $result->fetch_assoc()) {
+        $j=$row['product_price'];
+    }
+} else {
+    echo "0 结果";
+}
+$conn->close();
+?>
+<?php
+$conn=conn();
+
+$sql = "SELECT product_name  FROM product_information where id='6'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // 输出数据
+    while($row = $result->fetch_assoc()) {
+        $k=$row['product_name'];
+    }
+} else {
+    echo "0 结果";
+}
+$conn->close()
+?>
+<?php
+$conn=conn();
+$sql = "SELECT product_price  FROM product_information where id='6'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // 输出数据
+    while($row = $result->fetch_assoc()) {
+        $l=$row['product_price'];
+    }
+} else {
+    echo "0 结果";
+}
+$conn->close();
+?>
+
 <!DOCTYPE html
         PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -8,8 +210,7 @@
     <meta name="keywords" content="igg周边商城；">
     <meta name="description" itemprop="description" content="IGG周边商城最新商品，周边商场最热商品">
     <meta itemprop="name" content="IGG周边商城" />
-    <title>
-        IGG周边商城     </title>
+    <title>igg 商城 </title>
     <link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">
     <link href="css/swiper.min.css" rel="stylesheet" type="text/css">
     <link href="css/layout.css" rel="stylesheet" type="text/css">
@@ -283,82 +484,32 @@
                 </div>
                 <div class="ban-body">
                     <ul class="list after only_one_row ">
+                       <?php
+                       while($row = mysqli_fetch_assoc($zsresult)) {
 
-                        <li class="item topToBottom" data-goods_id="100483" >
-
-                            <a class="link" target="_blank" href="/product/100483.html">
+                        ?>
+                        <li class="item topToBottom"  >
+                            <a class="link" target="_blank" href="../product/100483.html">
                                 <div class="img show_tag " style="" >
-                                    <img style="" src="//statics.igg.com/game/1993/goods/2021/09/13/213235_614009c36b6811915.jpg">
-
-
-
-
+                                    <img style="" src="../php/image/statics/<?php  echo $row["product_img"]
+                                    ?>"
                                 </div>
 
                                 <div class="all-name ">
                                     <div class="product-name">
-                                        <span class="item-icon new"></span>                                                 《时光公主》拉法耶特Q萌毛绒挂件                    </div>
-                                    <div class="product-price">US$10.90</div>
+                                        <span class="item-icon new"></span>
+                                        <?php echo $row["product_name"] ?>
+                                    </div>
+                                    <div class="product-price">
+                                        <?php echo $row["product_price"]; ?>
+                                    </div>
                                 </div>
                             </a>
                         </li>
+<?php
+                       }
+?>
 
-                        <li class="item topToBottom" data-goods_id="100482" >
-
-                            <a class="link" target="_blank" href="/product/100482.html">
-                                <div class="img show_tag " style="" >
-                                    <img style="" src="//statics.igg.com/game/1993/goods/2021/08/27/020145_61288dd99ea496410.jpg">
-
-
-
-
-                                </div>
-
-                                <div class="all-name ">
-                                    <div class="product-name">
-                                        <span class="item-icon new"></span>                                                 时光公主 × 维也纳艺术史博物馆 梦幻精致礼盒套装                    </div>
-                                    <div class="product-price">US$16.90</div>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="item topToBottom" data-goods_id="100457" >
-
-                            <a class="link" target="_blank" href="/product/100457.html">
-                                <div class="img show_tag " style="" >
-                                    <img style="" src="//statics.igg.com/game/1993/goods/2021/05/23/213922_60ab11da4a84d3713.jpg">
-
-
-
-
-                                </div>
-
-                                <div class="all-name ">
-                                    <div class="product-name">
-                                        <span class="item-icon new"></span>                         <span class="item-icon hot"></span>                        《王国纪元》光明之子魔物天团盲盒                    </div>
-                                    <div class="product-price">US$12.00</div>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="item topToBottom" data-goods_id="100456" >
-
-                            <a class="link" target="_blank" href="/product/100456.html">
-                                <div class="img show_tag " style="" >
-                                    <img style="" src="//statics.igg.com/game/1993/goods/2021/05/17/023624_60a21cf83bc1a3835.jpg">
-
-
-
-
-                                </div>
-
-                                <div class="all-name ">
-                                    <div class="product-name">
-                                        <span class="item-icon new"></span>                                                 《王国纪元》萌萌英雄现身T恤                    </div>
-                                    <div class="product-price">US$19.90</div>
-                                </div>
-                            </a>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -390,8 +541,8 @@
 
                                 <div class="all-name ">
                                     <div class="product-name">
-                                        <span class="item-icon hot"></span>                        《城堡争霸》LOGO棒球帽                    </div>
-                                    <div class="product-price">US$28.00</div>
+                                        <span class="item-icon hot"></span>                        <?php echo $i ?>                   </div>
+                                    <div class="product-price"> <?php echo $j ?>  </div>
                                 </div>
                             </a>
                         </li>
@@ -409,8 +560,8 @@
 
                                 <div class="all-name ">
                                     <div class="product-name">
-                                        <span class="item-icon hot"></span>                        《王国纪元》异界引路人场景手办                    </div>
-                                    <div class="product-price">US$122.00</div>
+                                        <span class="item-icon hot"></span>                        <?php echo $k ?>                    </div>
+                                    <div class="product-price"> <?php echo $l ?> </div>
                                 </div>
                             </a>
                         </li>
@@ -748,3 +899,8 @@
         g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
     })();
 </script>
+
+
+</body>
+</html>
+<?php

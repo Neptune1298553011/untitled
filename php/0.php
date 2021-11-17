@@ -17,7 +17,7 @@ echo "";
 <head>
     <mete http-equiv="Content-Type" content="'text/html; charset=utf-8" />
     <title>商城</title>
-    <link href="../css/2.css" rel="stylesheet" type="text/css">
+    <link href="./css/2.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="jquery-1.11.0.js"></script>
 
 </head>
