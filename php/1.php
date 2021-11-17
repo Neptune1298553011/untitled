@@ -14,8 +14,13 @@ function conn(){
 return $conn;
 }
 $conn=conn();
-$sql = "SELECT * FROM product_information ";
+$sql = "SELECT * FROM new_product ";
 $zsresult = $conn->query($sql);
+$conn->close();
+
+$conn=conn();
+$sql = "SELECT * FROM hot_product ";
+$asresult = $conn->query($sql);
 $conn->close();
 ?>
 
@@ -308,7 +313,7 @@ $conn->close();
 
                         ?>
                         <li class="item topToBottom"  >
-                            <a class="link" target="_blank" href="../product/100483.html">
+                            <a class="link" target="_blank" href="../product/1.html">
                                 <div class="img show_tag " style="" >
                                     <img style="" src="../php/image/statics/<?php  echo $row["product_img"]
                                     ?>"
@@ -346,12 +351,17 @@ $conn->close();
                 </div>
                 <div class="ban-body">
                     <ul class="list after only_one_row news_goods_list">
+<?php
+while($row = mysqli_fetch_assoc($asresult)) {
+
+    ?>
 
                         <li class="item topToBottom" data-goods_id="100443" >
 
                             <a class="link" target="_blank" href="/product/100443.html">
                                 <div class="img show_tag " style="" >
-                                    <img style="" src="//statics.igg.com/shop/goods/2020/12/24/20201224d7cda280eb35ca9fff6691a4ae77919756623.jpg">
+                                    <img style="" src="../php/image/statics/<?php  echo $row["product_img"]
+                                    ?>">
 
 
 
@@ -360,71 +370,15 @@ $conn->close();
 
                                 <div class="all-name ">
                                     <div class="product-name">
-                                        <span class="item-icon hot"></span>                        <?php echo $i ?>                   </div>
-                                    <div class="product-price"> <?php echo $j ?>  </div>
+                                        <span class="item-icon hot"></span>  <?php echo $row["product_name"] ?>    </div>
+                                    <div class="product-price">  <?php echo $row["product_price"]; ?>   </div>
                                 </div>
                             </a>
                         </li>
 
-                        <li class="item topToBottom" data-goods_id="100433" >
-
-                            <a class="link" target="_blank" href="/product/100433.html">
-                                <div class="img show_tag " style="" >
-                                    <img style="" src="//statics.igg.com/shop/goods/2020/10/20/20201020f30f2b33dd381b9b54bd3845f2a9a1d837744.jpg">
-
-
-
-
-                                </div>
-
-                                <div class="all-name ">
-                                    <div class="product-name">
-                                        <span class="item-icon hot"></span>                        <?php echo $k ?>                    </div>
-                                    <div class="product-price"> <?php echo $l ?> </div>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="item topToBottom" data-goods_id="100457" >
-
-                            <a class="link" target="_blank" href="/product/100457.html">
-                                <div class="img show_tag " style="" >
-                                    <img style="" src="//statics.igg.com/game/1993/goods/2021/05/23/213922_60ab11da4a84d3713.jpg">
-
-
-
-
-                                </div>
-
-                                <div class="all-name ">
-                                    <div class="product-name">
-                                        <span class="item-icon new"></span>                         <span class="item-icon hot"></span>                        《王国纪元》光明之子魔物天团盲盒                    </div>
-                                    <div class="product-price">US$12.00</div>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="item topToBottom" data-goods_id="100396" >
-
-                            <a class="link" target="_blank" href="/product/100396.html">
-                                <div class="img show_tag " style="" >
-                                    <img style="" src="//statics.igg.com/shop/goods/2019/08/13/20190813df15996df9d11b3e19ddf5efc129593f83303.jpg">
-
-
-
-
-                                </div>
-
-                                <div class="all-name ">
-                                    <div class="product-name">
-                                        <span class="item-icon hot"></span>                        《王国纪元》格里芬马克杯                    </div>
-                                    <div class="product-price">US$53.00</div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+    <?php
+}
+?>
             <a class="item-list-more get_more_data" data-click-count="1">
                 更多        </a>
         </div>
