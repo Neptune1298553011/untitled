@@ -49,6 +49,8 @@ $conn->close();
     <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="F8PGR-MHD75-KZ22G-MNSSF-GYYDZ",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"F8PGR-MHD75-KZ22G-MNSSF-GYYDZ",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e=""=="true"?1:0,t="",n="ouoooeixziriaymr26hq-f-441da49ad-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"32","ak.cp":"842229","ak.ai":parseInt("537709",10),"ak.ol":"0","ak.cr":69,"ak.ipv":4,"ak.proto":"h2","ak.rid":"ca31710","ak.r":40584,"ak.a2":e,"ak.m":"b","ak.n":"ff","ak.bpcip":"117.28.231.0","ak.cport":52459,"ak.gh":"23.202.34.124","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.csrc":"-","ak.acc":"","ak.t":"1636947855","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==/rvj7h1W4mLCdHQCbqBj+yx5DT+eIrylTv1AvIhpHgCNwIR5N/NrwOYVk9+j6oNiEP9Zhha1CYEvjZ3JfbSNzrN17r7zlSaVRsTEwz+Iu9RXaSBdR3qHQolA+WrYZOX3dwSEYoxWEzStKhddozHtRRNJCWla792z5CrKFaOYkVTdEZp7RpqrV9n/f8Fmw9VN5l0lhR/Xg5lJphj6F614BMzis/HmJ64ypOaJaIzA3k76lA8egVSEwnTFo8zFQkPElmZB4ygZzPhxK0nziunesK0kOM4+Mh9E1IQXZANyyLu/fnqy0a+EYpx5i3pz+WqYbAiB/t1PWwVbAshdd6uC1SOWGLg3C/ezv/6Kz3dKu0Yv/HdC1InG68dih+Z2A/K4Xowk9GH8jnVm4FZ3oX2Wc0ogplP7Fu+waasHQDBhOKw=","ak.pv":"149","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
 
 <body class="cn ">
+
+
 <script src="scripts/passport.js"></script>
 <div class="js_lang_package" style="display:none;" data-success-title="成功"
      data-fail-title="失败">lang package</div>
@@ -172,7 +174,7 @@ $conn->close();
                             <a class="link-link" href="javascript:void(0);">数码配件</a>
                             <ul class="menu-list-third third">
                                 <li class="menu-item-item">
-                                    <a class="link-third" href="/product/1.html">手机壳</a>
+                                    <a class="link-third" href="/mvc/view/1.php">手机壳</a>
                                 </li>
                                 <li class="menu-item-item">
                                     <a class="link-third" href="/product/index?level=2&category_id=58&active_id=51">键盘</a>
@@ -273,9 +275,9 @@ $conn->close();
             <div class="swiper-wrapper">
 
                 <div class="swiper-slide">
-                    <a target='_blank' class='link' href='https://store.igg.com/product/100483.html'><img src='//statics.igg.com/game/1993/goods/2021/10/09/062810_61617ccaa13607309.jpg' ></a>            </div>
+                    <a target='_blank' class='link' href='http://localhost/untitled/product/1.html'><img src='//statics.igg.com/game/1993/goods/2021/10/09/062810_61617ccaa13607309.jpg' ></a>            </div>
                 <div class="swiper-slide">
-                    <a target='_blank' class='link' href='https://store.igg.com/product/100482.html'><img src='//statics.igg.com/game/1993/goods/2021/09/08/022413_6138651d27d4e2705.jpg' ></a>            </div>
+                    <a target='_blank' class='link' href='http://localhost/untitled/product/2.html'><img src='//statics.igg.com/game/1993/goods/2021/09/08/022413_6138651d27d4e2705.jpg' ></a>            </div>
                 <div class="swiper-slide">
                     <a target='_blank' class='link' href='https://store.igg.com/product/100477.html'><img src='//statics.igg.com/game/1993/goods/2021/07/05/014251_60e2a9ebc26623143.jpg' ></a>            </div>
                 <div class="swiper-slide">
@@ -310,10 +312,10 @@ $conn->close();
                     <ul class="list after only_one_row ">
                        <?php
                        while($row = mysqli_fetch_assoc($zsresult)) {
-
-                        ?>
+                           ?>
                         <li class="item topToBottom"  >
-                            <a class="link" target="_blank" href="../product/1.html">
+                            <a class="link" target="_blank" href="http://localhost/untitled/mvc/view/new<?php  echo $row["address"]
+                            ?>.php">
                                 <div class="img show_tag " style="" >
                                     <img style="" src="../php/image/statics/<?php  echo $row["product_img"]
                                     ?>"
@@ -353,12 +355,12 @@ $conn->close();
                     <ul class="list after only_one_row news_goods_list">
 <?php
 while($row = mysqli_fetch_assoc($asresult)) {
-
     ?>
 
                         <li class="item topToBottom" data-goods_id="100443" >
 
-                            <a class="link" target="_blank" href="/product/100443.html">
+                            <a class="link" target="_blank" href="http://localhost/untitled/mvc/view/hot<?php  echo $row["address"]
+                            ?>.php">
                                 <div class="img show_tag " style="" >
                                     <img style="" src="../php/image/statics/<?php  echo $row["product_img"]
                                     ?>">
