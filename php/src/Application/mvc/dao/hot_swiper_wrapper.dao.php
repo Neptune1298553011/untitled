@@ -6,9 +6,9 @@ class hotswiperwrapperDao
 {
 
 
-    public function selectById($id){
+    public function selectById($No){
         $conn = SQLSession::get_sql_connection();
-        $sql = "select * from hot_swiper_wrapper where  id =" . $id;
+        $sql = "select * from hot_swiper_wrapper where  id =" . $No;
         $result = $conn->query($sql);
 
         if (!$result){
@@ -20,7 +20,7 @@ class hotswiperwrapperDao
             while ($row = $result->fetch_assoc()) {
                 // todo 通过类构造器获取
                 $temp = new swiper();
-                $temp->id = $row['id'];
+                $temp->No = $row['id'];
                 $temp->img1 = $row['img1'];
                 $temp->img2 = $row['img2'];
                 $temp->img3=$row['img3'];

@@ -43,29 +43,62 @@
 
 <body class="cn ">
 
+
+
+
+
 <?php
 include_once '../service/ProductService.php';
 include_once '../controller/ProductController.php';
-$id = $_GET['id'];
-if (empty($id)){
-    $id = 1;
+$No = $_GET['id'];
+if (empty($No)){
+    $No = 1;
 }
 $controller = new ProductController3();
-$respon = $controller->productDetail($id);
+$respona = $controller->productDetail($No);
 
 
 ?>
 <?php
-include_once '../service/ProductService.php';
-include_once '../controller/ProductController.php';
-$id = $_GET['id'];
-if (empty($id)){
-    $id = 1;
+function conn(){
+    $servername = "localhost:3306";
+    $username = "admin";
+    $password = "123456";
+    $dbname = "igg";
+
+// 创建连接
+    $conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+    if ($conn->connect_error) {
+        die("连接失败: " . $conn->connect_error);
+    }
+    return $conn;
 }
-$controller = new ProductController2();
-$respon = $controller->productDetail($id);
+
+$conn=conn();
+$sql = "SELECT * FROM hot_product_view ";
+$zsresult = $conn->query($sql);
+$conn->close();
+?>
+
+<?php
+while($row = mysqli_fetch_assoc($zsresult)) {
+?>
+    <?php
+    include_once '../service/ProductService.php';
+    include_once '../controller/ProductController.php';
+    $id = $_GET['<?php echo $row{"id"} ?>'];
+    if (empty($id)){
+        $id = 1;
+    }
+    $controller = new ProductController2();
+    $respon = $controller->productDetail($id);
 
 
+    ?>
+
+    <?php
+}
 ?>
 
 <script src="../../../../public/scripts/passport.js"></script>
@@ -272,22 +305,23 @@ $respon = $controller->productDetail($id);
                     <div class="swiper-wrapper">
                                                 <div class="swiper-slide">
                             <a class="link" href="#">
-                                <img src="../../../../public/images/statics/<?php echo $respon->img1; ?>">
+                                <img src="../../../../public/images/statics/<?php echo $respona->img1; ?>"><?php  echo $row["product_img"]
+                                ?>
                             </a>
                         </div>
                         <div class="swiper-slide">
                         <a class="link" href="#">
-                            <img src="../../../../public/images/statics/<?php echo $respon->img2; ?>">
+                            <img src="../../../../public/images/statics/<?php echo $respona->img2; ?>">
                         </a>
                     </div>
                         <div class="swiper-slide">
                     <a class="link" href="#">
-                        <img src="../../../../public/images/statics/<?php echo $respon->img3; ?>">
+                        <img src="../../../../public/images/statics/<?php echo $respona->img3; ?>">
                     </a>
                 </div>
                         <div class="swiper-slide">
                 <a class="link" href="#">
-                    <img src="../../../../public/images/statics/<?php echo $respon->img4; ?>">
+                    <img src="../../../../public/images/statics/<?php echo $respona->img4; ?>">
                 </a>
             </div>
 <!--                                                <div class="swiper-slide">-->

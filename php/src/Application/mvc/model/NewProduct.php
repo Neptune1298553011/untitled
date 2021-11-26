@@ -21,7 +21,7 @@ class HotProduct
 
 class swiper
 {
-    public $id;
+    public $No;
     public $img1;
     public $img2;
     public $img3;

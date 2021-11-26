@@ -40,8 +40,8 @@ class ProductService3
         $this->categoryDaoHot = new hotswiperwrapperDao();
     }
 
-    public function selectById($id)
+    public function selectById($No)
     {
-        return $this->categoryDaoHot->selectById($id);
+        return $this->categoryDaoHot->selectById($No);
     }
 }

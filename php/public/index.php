@@ -1,4 +1,6 @@
 <?php
+
+
 function conn(){
     $servername = "localhost:3306";
     $username = "admin";
@@ -316,7 +318,7 @@ $conn->close();
                         <li class="item topToBottom"  >
                             <a class="link" target="_blank"
                                href="http://10.0.8.125/untitled/php/src/Application/mvc/view/new<?php  echo $row["address"]
-                               ?>.php"
+                               ?>.php?=<?php echo $row{"id"} ?>>"
 
                             >
                                 <div class="img show_tag " style="" >

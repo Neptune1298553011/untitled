@@ -1,0 +1,13 @@
+{
+  "require": {
+    "slim/slim": "3.0",
+    "monolog/monolog": "^1.17",
+    "vlucas/phpdotenv": "^2.4"
+  },
+
+  "autoload": {
+    "psr-4": {
+      "Application\\" : "src/Application"
+    }
+  }
+}

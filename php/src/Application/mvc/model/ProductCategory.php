@@ -29,7 +29,7 @@ class ProductCategoryHot
 }
 class hotswiperwrapper
 {
-    public   $id;
+    public   $No;
     // 类别
     public   $category_name;
     // 父ID

@@ -56,6 +56,19 @@ $respon = $controller->productDetail($id);
 
 ?>
 
+<?php
+include_once '../service/ProductService.php';
+include_once '../controller/ProductController.php';
+$No = $_GET['id'];
+if (empty($No)){
+    $No = 1;
+}
+$controller = new ProductController2();
+$respon = $controller->productDetail($No);
+
+
+?>
+
 <script src="../../../../public/scripts/passport.js"></script>
     <div class="js_lang_package" style="display:none;" data-success-title="成功"
         data-fail-title="失败">lang package</div>
