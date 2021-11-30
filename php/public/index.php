@@ -16,12 +16,12 @@ function conn(){
 return $conn;
 }
 $conn=conn();
-$sql = "SELECT * FROM new_product ";
+$sql = "SELECT * FROM product  where product_type='new' limit 4 ";
 $zsresult = $conn->query($sql);
 $conn->close();
 
 $conn=conn();
-$sql = "SELECT * FROM hot_product ";
+$sql = "SELECT * FROM product  where product_type='hot' limit 4  ";
 $asresult = $conn->query($sql);
 $conn->close();
 ?>
@@ -317,10 +317,7 @@ $conn->close();
                            ?>
                         <li class="item topToBottom"  >
                             <a class="link" target="_blank"
-                               href="http://10.0.8.125/untitled/php/src/Application/mvc/view/new<?php  echo $row["address"]
-                               ?>.php?=<?php echo $row{"id"} ?>>"
-
-                            >
+                               href="../src/Application/mvc/view/hot1.php?id=<?php echo $row['id'];?>">
                                 <div class="img show_tag " style="" >
                                     <img style="" src="images/statics/<?php  echo $row["product_img"]
                                     ?>"
@@ -364,8 +361,7 @@ while($row = mysqli_fetch_assoc($asresult)) {
 
                         <li class="item topToBottom" data-goods_id="100443" >
 
-                            <a class="link" target="_blank" href="http://10.0.8.125/untitled/php/src/Application/mvc/view/hot<?php  echo $row["address"]
-                            ?>.php">
+                            <a class="link" target="_blank" href="../src/Application/mvc/view/hot1.php?id=<?php echo $row['id'];?>">
                                 <div class="img show_tag " style="" >
                                     <img style="" src="images/statics/<?php  echo $row["product_img"]
                                     ?>">

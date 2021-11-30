@@ -261,29 +261,29 @@ $respon = $controller->productDetail($id);
                     <div class="swiper-wrapper">
                                                 <div class="swiper-slide">
                             <a class="link" href="#">
-                                <img src="//statics.igg.com/game/1993/goods/2021/09/13/213235_614009c3c1b9e3738.jpg">
+                                <img src="../../../../public/images/statics/<?php echo $respon->swiper_wrapper; ?>">
                             </a>
                         </div>
-                                                <div class="swiper-slide">
-                            <a class="link" href="#">
-                                <img src="//statics.igg.com/game/1993/goods/2021/09/13/213235_614009c3c34e23440.jpg">
-                            </a>
-                        </div>
-                                                <div class="swiper-slide">
-                            <a class="link" href="#">
-                                <img src="//statics.igg.com/game/1993/goods/2021/09/13/213235_614009c3ca7d61740.jpg">
-                            </a>
-                        </div>
-                                                <div class="swiper-slide">
-                            <a class="link" href="#">
-                                <img src="//statics.igg.com/game/1993/goods/2021/09/13/213235_614009c3cc7ea9526.jpg">
-                            </a>
-                        </div>
-                                                <div class="swiper-slide">
-                            <a class="link" href="#">
-                                <img src="//statics.igg.com/game/1993/goods/2021/09/13/213235_614009c3ca4d36779.jpg">
-                            </a>
-                        </div>
+<!--                                                <div class="swiper-slide">-->
+<!--                            <a class="link" href="#">-->
+<!--                                <img src="//statics.igg.com/game/1993/goods/2021/09/13/213235_614009c3c34e23440.jpg">-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                                                <div class="swiper-slide">-->
+<!--                            <a class="link" href="#">-->
+<!--                                <img src="//statics.igg.com/game/1993/goods/2021/09/13/213235_614009c3ca7d61740.jpg">-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                                                <div class="swiper-slide">-->
+<!--                            <a class="link" href="#">-->
+<!--                                <img src="//statics.igg.com/game/1993/goods/2021/09/13/213235_614009c3cc7ea9526.jpg">-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                                                <div class="swiper-slide">-->
+<!--                            <a class="link" href="#">-->
+<!--                                <img src="//statics.igg.com/game/1993/goods/2021/09/13/213235_614009c3ca4d36779.jpg">-->
+<!--                            </a>-->
+<!--                        </div>-->
                                             </div>
                     <!-- Add Pagination -->
                     <div class="swiper-pagination"></div>
@@ -369,7 +369,11 @@ $respon = $controller->productDetail($id);
         <div class="igg-item-note-content">
             <div class="note-body">
             <p>
-	<img alt="" src="https://statics.igg.com/game/1993/goods/2021/09/14/044926_61407026a0db94108.jpg" /><img alt="" src="https://statics.igg.com/game/1993/goods/2021/09/14/045627_614071cba9a0a7513.jpg" style="width: 1280px; height: 1916px;" /><img alt="" src="https://statics.igg.com/game/1993/goods/2021/09/14/051802_614076da767248907.jpg" /><img alt="" src="https://statics.igg.com/game/1993/goods/2021/09/14/051813_614076e5c02b21816.jpg" /><img alt="" src="https://statics.igg.com/game/1993/goods/2021/09/14/051822_614076ee833c84616.jpg" /></p>            </div>
+	<img alt="" src="../../../../public/images/statics/<?php echo $respon->note_body_img1; ?>"" />
+                <img alt="" src="../../../../public/images/statics/<?php echo $respon->note_body_img2; ?>"
+<!--                <img alt="" src="https://statics.igg.com/game/1993/goods/2021/09/14/051802_614076da767248907.jpg" />-->
+<!--                <img alt="" src="https://statics.igg.com/game/1993/goods/2021/09/14/051813_614076e5c02b21816.jpg" />-->
+<!--                <img alt="" src="https://statics.igg.com/game/1993/goods/2021/09/14/051822_614076ee833c84616.jpg" /></p>            </div>-->
         </div>
     </div>
     

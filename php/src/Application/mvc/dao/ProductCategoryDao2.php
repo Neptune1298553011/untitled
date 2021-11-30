@@ -25,6 +25,9 @@ class ProductCategoryDaoHOT
                 $temp->product_name = $row['product_name'];
                 $temp->product_information=$row['product_information'];
                 $temp->product_img=$row['product_img'];
+                $temp->swiper_wrapper=$row['swiper_wrapper'];
+                $temp->note_body_img1=$row['note_body_img1'];
+                $temp->note_body_img2=$row['note_body_img2'];
                 // 补充属性
                 $response = $temp;
             }

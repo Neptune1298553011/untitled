@@ -1,3 +1,6 @@
+<?php
+require 'rujin.php';
+?>
 <!DOCTYPE html
     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -23,9 +26,9 @@
         
     <link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">
     <!-- <link rel="stylesheet" href="/styles/idangerous.swiper.css"> -->
-    <link rel="stylesheet" href="../../../../public/css/swiper.min.css">
-    <link rel="stylesheet" href="../../../../public/css/layout.css">
-    <link rel="stylesheet" href="../../../../public/css/style.css">
+    <link rel="stylesheet" href="<?php echo STYLEPATH ;?>css/swiper.min.css">
+    <link rel="stylesheet" href="<?php echo STYLEPATH ;?>css/layout.css">
+    <link rel="stylesheet" href="<?php echo STYLEPATH ;?>css/style.css">
     <!--[if lte IE 9]>
 <!--<link rel="stylesheet" href="/styles/style_ie8.css">-->
 <![endif]-->
@@ -50,24 +53,12 @@ $id = $_GET['id'];
 if (empty($id)){
     $id = 1;
 }
-$controller = new ProductController2();
+$controller = new ProductController();
 $respon = $controller->productDetail($id);
 
 
 ?>
 
-<?php
-include_once '../service/ProductService.php';
-include_once '../controller/ProductController.php';
-$No = $_GET['id'];
-if (empty($No)){
-    $No = 1;
-}
-$controller = new ProductController2();
-$respon = $controller->productDetail($No);
-
-
-?>
 
 <script src="../../../../public/scripts/passport.js"></script>
     <div class="js_lang_package" style="display:none;" data-success-title="成功"
@@ -273,29 +264,29 @@ $respon = $controller->productDetail($No);
                     <div class="swiper-wrapper">
                                                 <div class="swiper-slide">
                             <a class="link" href="#">
-                                <img src="../../../../public/images/statics/18.jpg">
+                                <img src="../../../../public/images/statics/<?php echo $respon->product_swiper_wrapper; ?> ">
                             </a>
                         </div>
-                                                <div class="swiper-slide">
-                            <a class="link" href="#">
-                                <img src="../../../../public/images/statics/19.jpg">
-                            </a>
-                        </div>
-                                                <div class="swiper-slide">
-                            <a class="link" href="#">
-                                <img src="../../../../public/images/statics/20.jpg">
-                            </a>
-                        </div>
-                                                <div class="swiper-slide">
-                            <a class="link" href="#">
-                                <img src="../../../../public/images/statics/21.jpg">
-                            </a>
-                        </div>
-                                                <div class="swiper-slide">
-                            <a class="link" href="#">
-                                <img src="../../../../public/images/statics/22.jpg">
-                            </a>
-                        </div>
+<!--                                                <div class="swiper-slide">-->
+<!--                            <a class="link" href="#">-->
+<!--                                <img src="../../../../public/images/statics/19.jpg">-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                                                <div class="swiper-slide">-->
+<!--                            <a class="link" href="#">-->
+<!--                                <img src="../../../../public/images/statics/20.jpg">-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                                                <div class="swiper-slide">-->
+<!--                            <a class="link" href="#">-->
+<!--                                <img src="../../../../public/images/statics/21.jpg">-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                                                <div class="swiper-slide">-->
+<!--                            <a class="link" href="#">-->
+<!--                                <img src="../../../../public/images/statics/22.jpg">-->
+<!--                            </a>-->
+<!--                        </div>-->
                                             </div>
                     <!-- Add Pagination -->
                     <div class="swiper-pagination"></div>
@@ -385,7 +376,8 @@ $respon = $controller->productDetail($No);
         <div class="igg-item-note-content">
             <div class="note-body">
             <p>
-	<img alt="" src="../../../../public/images/statics/23.jpg" /></p>            </div>
+                <img alt="" src="../../../../public/images/statics/<?php echo $respon->product_note_body_img1; ?>"" />
+                <img alt="" src="../../../../public/images/statics/<?php echo $respon->product_note_body_img2; ?>"</p>            </div>
         </div>
     </div>
     

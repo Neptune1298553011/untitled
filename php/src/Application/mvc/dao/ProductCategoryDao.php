@@ -8,7 +8,7 @@ class ProductCategoryDao
 
     public function selectById($id){
         $conn = SQLSession::get_sql_connection();
-        $sql = "select * from new_product where  id =" . $id;
+        $sql = "select * from product where  id =" . $id;
         $result = $conn->query($sql);
 
         if (!$result){
@@ -24,6 +24,9 @@ class ProductCategoryDao
                 $temp->product_price = $row['product_price'];
                 $temp->product_name = $row['product_name'];
                 $temp->product_information=$row['product_information'];
+                $temp->product_swiper_wrapper=$row['product_swiper_wrapper'];
+                $temp->product_note_body_img1=$row['product_note_body_img1'];
+                $temp->product_note_body_img2=$row['product_note_body_img2'];
                 // 补充属性
                 $response = $temp;
             }
