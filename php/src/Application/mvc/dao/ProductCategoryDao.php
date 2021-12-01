@@ -27,6 +27,7 @@ class ProductCategoryDao
                 $temp->product_swiper_wrapper=$row['product_swiper_wrapper'];
                 $temp->product_note_body_img1=$row['product_note_body_img1'];
                 $temp->product_note_body_img2=$row['product_note_body_img2'];
+                $temp->page=$row['page'];
                 // 补充属性
                 $response = $temp;
             }

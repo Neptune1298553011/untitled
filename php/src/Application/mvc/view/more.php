@@ -1,5 +1,7 @@
+
 <?php
 
+include_once '../dao/ProductCategoryDao.php';
 
 function conn(){
     $servername = "localhost:3306";
@@ -15,10 +17,30 @@ function conn(){
     }
     return $conn;
 }
+
+
 $conn=conn();
-$sql = "SELECT * FROM product ";
-$zsresult = $conn->query($sql);
+$sql = "SELECT page FROM product ";
+$asresult = $conn->query($sql);
 $conn->close();
+$num=6;
+if($_GET["page"]){
+    $page=($_GET["page"]-1)*$num;
+    $conn=conn();
+    $sql= "SELECT * FROM product ORDER  BY id  limit {$page},{$num}";
+    $zsresult = $conn ->query($sql);
+    $conn ->close();
+}else{
+    $conn=conn();
+    $sql= "SELECT * FROM product ORDER  BY id  limit 0,{$num}";
+    $zsresult = $conn ->query($sql);
+    $conn ->close();
+}
+
+
+
+
+
 ?>
 
 <?php
@@ -368,6 +390,8 @@ require 'rujin.php';
             </ul>
         </div>
         <?php
+
+
         while($row = mysqli_fetch_assoc($zsresult)) {
         ?>
         <div class="item-list">
@@ -377,7 +401,7 @@ require 'rujin.php';
 
                         <li class="item topToBottom" data-goods_id="100483" >
 
-                            <a class="link" target="_blank" href="hot1.php?id=<?php echo $row['id'];?>">
+                            <a class="link" target="_blank" href="view.php?id=<?php echo $row['id'];?>">
                                 <div class="img show_tag " style="" >
                                     <img style="" src="../../../../public/images/statics/<?php  echo $row["product_img"]
                                     ?>">
@@ -390,13 +414,15 @@ require 'rujin.php';
                                 <div class="all-name ">
                                     <div class="product-name">
                                         <span class="item-icon new"></span>                                        <?php echo $row["product_name"] ?>       </div>
-                                    <div class="product-price">  <?php echo $row["product_price"]; ?></div>
+                                    <div class="product-price">  <?php echo $row["product_price"]; ?> </div>
                                 </div>
                             </a>
                         </li>
                         <?php
+
                         }
                         ?>
+
 <!--                        <li class="item topToBottom" data-goods_id="100482" >-->
 <!---->
 <!--                            <a class="link" target="_blank" href="/product/100482.html">-->
@@ -685,13 +711,17 @@ require 'rujin.php';
 <!--                </div>-->
 <!--            </div>-->
 
-            <div class="page after js_page">
-    <a class="link btn" href="javascript:;"><</a><a class="link current">1</a><a class="link" href="more.php?id=<?php echo $row['id'];?>">2</a><a class="link" href="/product/index?sort=3&page=3">3</a><a class="link" href="/product/index?sort=3&page=4">4</a><a class="link" href="/product/index?sort=3&page=5">5</a><a class="link btn" href="/product/index?sort=3&page=2">></a>			</div>
-
-                </div>
+       <div class="page after js_page">
 
 
-        <script type="text/javascript">
+           <a class="link" href="more.php?page=1">1</a>
+           <a class="link" href="more.php?page=2">2</a>
+           <a class="link" href="more.php?page=3">3</a>
+
+           </a>	</div>
+        </div>
+
+                <script type="text/javascript">
 
             $(document).ready(function(){
                 var list_item = $(".list-select .list .item");

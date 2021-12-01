@@ -76,6 +76,8 @@ $conn->close();
         <div class="fr">
             <div class="link head-search after open-son">
                 <div class="fl head-search-body">
+                    <a class="view" href="../src/Application/mvc/view/more.php?">
+                        更多商品                </a>
                     <div class="head-search-search_btn">
                         搜索                        </div>
                     <input type="text" name="sale_name" value=""
@@ -306,7 +308,7 @@ $conn->close();
                             最新商品                    </h3>
                     </div>
                     <div class="fr">
-                        <a class="view" href="/product/index?sort=3">
+                        <a class="view" href="../src/Application/mvc/view/more.php">
                             更多                    </a>
                     </div>
                 </div>
@@ -315,9 +317,10 @@ $conn->close();
                        <?php
                        while($row = mysqli_fetch_assoc($zsresult)) {
                            ?>
+
                         <li class="item topToBottom"  >
                             <a class="link" target="_blank"
-                               href="../src/Application/mvc/view/hot1.php?id=<?php echo $row['id'];?>">
+                               href="../src/Application/mvc/view/view.php?id=<?php echo $row['id'];?>">
                                 <div class="img show_tag " style="" >
                                     <img style="" src="images/statics/<?php  echo $row["product_img"]
                                     ?>"
@@ -361,7 +364,7 @@ while($row = mysqli_fetch_assoc($asresult)) {
 
                         <li class="item topToBottom" data-goods_id="100443" >
 
-                            <a class="link" target="_blank" href="../src/Application/mvc/view/hot1.php?id=<?php echo $row['id'];?>">
+                            <a class="link" target="_blank" href="../src/Application/mvc/view/view.php?id=<?php echo $row['id'];?>">
                                 <div class="img show_tag " style="" >
                                     <img style="" src="images/statics/<?php  echo $row["product_img"]
                                     ?>">

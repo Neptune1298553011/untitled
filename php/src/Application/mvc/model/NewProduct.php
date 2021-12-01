@@ -11,6 +11,7 @@ class NewProduct
     public $product_swiper_wrapper;
     public $product_note_body_img1;
     public $product_note_body_img2;
+    public $page;
 
 }
 
