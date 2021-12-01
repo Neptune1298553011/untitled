@@ -11,115 +11,11 @@
  Target Server Version : 50726
  File Encoding         : 65001
 
- Date: 30/11/2021 10:39:38
+ Date: 01/12/2021 18:55:25
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
-
--- ----------------------------
--- Table structure for hot_product
--- ----------------------------
-DROP TABLE IF EXISTS `hot_product`;
-CREATE TABLE `hot_product`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `product_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
-  `product_price` varchar(10) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
-  `product_information` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
-  `product_img` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
-  `address` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
-  `swiper_wrapper` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
-  `note_body_img1` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
-  `note_body_img2` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of hot_product
--- ----------------------------
-INSERT INTO `hot_product` VALUES (1, '《城堡争霸》LOGO棒球帽', '￥28', '游戏经典LOGO，金色与黑色金属线搭配，简洁百搭。\r\n\r\n所属游戏: 城堡争霸\r\n\r\n款式: 棒球帽\r\n\r\n材质: 30%羊毛，70%涤纶\r\n\r\n产品尺寸: 56-60 CM', '9.jpg', '1', '18.jpg', '51.jpg', '');
-INSERT INTO `hot_product` VALUES (2, '《王国纪元》异界引路人场景手办', '￥122', '全球500只，限量珍藏。\r\n\r\n所属游戏: 王国纪元\r\n\r\n主要材质: PU\r\n\r\n产品尺寸: 138(L) x 90(W) x 100(H) MM\r\n\r\n包装尺寸: 220(L) x 240(W) x 105（H）MM', '10.jpg', '2', '25.jpg', '53.jpg', '54.jpg');
-INSERT INTO `hot_product` VALUES (3, '《王国纪元》光明之子魔物天团盲盒', '￥12', '《王国纪元》英雄魔物天团，立志成为制霸世界的传奇英雄 —— 光明之子！\r\n\r\n所属游戏: 王国纪元\r\n\r\n材质: PVC\r\n\r\n尺寸: 78mm*60mm*80mm\r\n\r\n数量: 单个盲盒/整盒已售罄\r\n\r\n温馨提示: 盲盒为特殊商品，非质量问题不支持退换。想要几个请拍几份，不保证无重复款。', '11.jpg', '3', '39.jpg', '47.jpg', '48.jpg');
-INSERT INTO `hot_product` VALUES (4, '\r\n《王国纪元》格里芬马克杯', '￥53', '神奇的魔物在这里\r\n\r\n游戏: 王国纪元\r\n\r\n款式: 格里芬\r\n\r\n材质: 陶瓷、PVC\r\n\r\n容量: 300ml', '12.jpg', '4', '57.jpg', '55.jpg', '56.jpg');
-
--- ----------------------------
--- Table structure for hot_product_view
--- ----------------------------
-DROP TABLE IF EXISTS `hot_product_view`;
-CREATE TABLE `hot_product_view`  (
-  `id` int(11) NOT NULL,
-  `hot_product_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
-  `hot_product_price` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
-  `hot_product_information` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
-  `hot_swiper_wrapper` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of hot_product_view
--- ----------------------------
-INSERT INTO `hot_product_view` VALUES (1, '《城堡争霸》LOGO棒球帽', '￥28', '游戏经典LOGO，金色与黑色金属线搭配，简洁百搭。\r\n\r\n所属游戏: 城堡争霸\r\n\r\n款式: 棒球帽\r\n\r\n材质: 30%羊毛，70%涤纶\r\n\r\n产品尺寸: 56-60 CM', NULL);
-INSERT INTO `hot_product_view` VALUES (2, '《王国纪元》异界引路人场景手办', '￥122', '全球500只，限量珍藏。\r\n\r\n所属游戏: 王国纪元\r\n\r\n主要材质: PU\r\n\r\n产品尺寸: 138(L) x 90(W) x 100(H) MM\r\n\r\n包装尺寸: 220(L) x 240(W) x 105（H）MM', NULL);
-INSERT INTO `hot_product_view` VALUES (3, '《王国纪元》光明之子魔物天团盲盒', '￥12', '《王国纪元》英雄魔物天团，立志成为制霸世界的传奇英雄 —— 光明之子！\r\n\r\n所属游戏: 王国纪元\r\n\r\n材质: PVC\r\n\r\n尺寸: 78mm*60mm*80mm\r\n\r\n数量: 单个盲盒/整盒已售罄\r\n\r\n温馨提示: 盲盒为特殊商品，非质量问题不支持退换。想要几个请拍几份，不保证无重复款。', NULL);
-INSERT INTO `hot_product_view` VALUES (4, '\r\n《王国纪元》格里芬马克杯', '￥53', '神奇的魔物在这里\r\n\r\n游戏: 王国纪元\r\n\r\n款式: 格里芬\r\n\r\n材质: 陶瓷、PVC\r\n\r\n容量: 300ml', NULL);
-
--- ----------------------------
--- Table structure for hot_swiper_wrapper
--- ----------------------------
-DROP TABLE IF EXISTS `hot_swiper_wrapper`;
-CREATE TABLE `hot_swiper_wrapper`  (
-  `id` int(11) NOT NULL,
-  `img1` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
-  `img2` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
-  `img3` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
-  `img4` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of hot_swiper_wrapper
--- ----------------------------
-INSERT INTO `hot_swiper_wrapper` VALUES (1, '18.jpg', '19.jpg', '20.jpg', '21.jpg');
-
--- ----------------------------
--- Table structure for new_product
--- ----------------------------
-DROP TABLE IF EXISTS `new_product`;
-CREATE TABLE `new_product`  (
-  `id` int(255) NOT NULL AUTO_INCREMENT,
-  `product_price` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
-  `product_information` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
-  `product_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL COMMENT '名字',
-  `product_img` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
-  `address` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
-  `swiper_wrapper` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
-  `note_body_img1` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
-  `note_body_img2` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 8 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of new_product
--- ----------------------------
-INSERT INTO `new_product` VALUES (1, '￥100', '拉法耶特重磅登场！在现实中苏醒，守护你左右！\r\n\r\n所属游戏: 《时光公主》\r\n\r\n主要材料: 超柔水晶绒、合金、硅胶、毛毡\r\n\r\n填充物: 聚酯纤维\r\n\r\n尺寸: 高约14CM ', '《时光公主》拉法耶特Q萌毛绒挂件', '5.jpg', '1', '37.jpg', '41.jpg', '44.jpg');
-INSERT INTO `new_product` VALUES (2, '￥16', '时光公主 × 维也纳艺术史博物馆梦幻精致礼盒套装，维也纳艺术史博物馆，全世界第四大艺术博物馆。具有文艺复兴时期的壮丽外观，更巧妙使用各色大理石的庄严内部装饰，不仅以丰富的收藏品吸引群众，更以博物馆的外观与内部装饰驰名于世。\n所属游戏: 时光公主\n书签材质&工艺: 黄铜，烤漆填色，电镀\n耳环材质&工艺: 电镀，镶嵌锆石，纯银耳针\n书签尺寸: 6 x 6 (cm) 链条:11 (cm)\n耳环尺寸: 3.5 x 3.5 (cm) 链条:4 (cm)\n包装盒尺寸: 22 x 22 (cm', '时光公主 × 维也纳艺术史博物馆 梦幻精致礼盒套装', '6.jpg', '2', '38.jpg', '45.jpg', '46.jpg');
-INSERT INTO `new_product` VALUES (3, '￥12', '《王国纪元》英雄魔物天团，立志成为制霸世界的传奇英雄 —— 光明之子！\r\n\r\n所属游戏: 王国纪元\r\n\r\n材质: PVC\r\n\r\n尺寸: 78mm*60mm*80mm\r\n\r\n数量: 单个盲盒/整盒已售罄\r\n\r\n温馨提示: 盲盒为特殊商品，非质量问题不支持退换。想要几个请拍几份，不保证无重复款。', '《王国纪元》光明之子魔物天团盲盒', '7.jpg', '3', '39.jpg', '47.jpg', '48.jpg');
-INSERT INTO `new_product` VALUES (4, '￥19', '2021年《王国纪元》第一款短袖T恤重磅推出，Q版图案可盐可甜；黑、白两色随心选择，时髦百搭；材质亲肤，炎炎夏日的不二之选\r\n\r\n品名: 《王国纪元》萌萌英雄现身T恤\r\n\r\n所属游戏: 王国纪元\r\n\r\n款式: 圆领\r\n\r\n颜色: 白色、黑色', '《王国纪元》萌萌英雄现身T恤', '8.jpg', '4', '40.jpg', '49.jpg', '50.jpg');
-
--- ----------------------------
--- Table structure for picture
--- ----------------------------
-DROP TABLE IF EXISTS `picture`;
-CREATE TABLE `picture`  (
-  `id` int(11) NOT NULL,
-  `local_path` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
-  `product_id` int(11) NULL DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of picture
--- ----------------------------
 
 -- ----------------------------
 -- Table structure for product
@@ -156,23 +52,6 @@ INSERT INTO `product` VALUES (11, 'new', '《王国纪元》英雄手办胜利�
 INSERT INTO `product` VALUES (12, 'new', '《王国纪元》玫瑰骑士手办 胜利版', '￥30', '精制材选，细腻涂装，丰富表情。让世界没有战争! 胜利就在眼前！\r\n\r\n所属游戏: 王国纪元\r\n\r\n主要材质: PVC、ABS\r\n\r\n产品重量: 0.4 KG\r\n\r\n产品尺寸: 70(W) x 70(D) x 155(H) MM\r\n\r\n包装尺寸: 135(W) x 115(D) x 165(H) MM', '66.jpg', '12', '67.jpg', '68.jpg', '69.jpg');
 INSERT INTO `product` VALUES (13, 'new', '《王国纪元》仙境守护者手办 胜利版', '￥52', '优选材质，手感醇厚，收藏价值高。\r\n\r\n所属游戏: 王国纪元\r\n\r\n主要材质: PVC、ABS\r\n\r\n产品重量: 0.55 KG\r\n\r\n产品尺寸: 110(W) x 105(D) x 115(H) MM\r\n\r\n包装尺寸: 135(W) x 115(D) x 165(H) MM', '70.jpg', '13', '71.jpg', '72.jpg', '73.jpg');
 INSERT INTO `product` VALUES (14, 'new', '《王国纪元》小恶魔手办 胜利版', '￥30', '自由率性，天真可爱，艾丽斯的顽劣，你害怕吗？\r\n\r\n所属游戏: 王国纪元\r\n\r\n主要材质: PVC、ABS\r\n\r\n产品重量: 0.35 KG\r\n\r\n产品尺寸: 70(W) x 70(D) x 100(H) MM\r\n\r\n包装尺寸: 115(W) x 115(D) x 135(H) MM', '74.jpg', '14', '75.jpg', '76.jpg', '77.jpg');
-INSERT INTO `product` VALUES (15, 'new', '《王国纪元》冰霜翼龙马克杯', '￥53', '神奇的魔物在这里\r\n\r\n游戏: 王国纪元\r\n\r\n款式: 冰霜翼龙\r\n\r\n材质: 陶瓷、PVC\r\n\r\n容量: 300ml', '78.jpg', '15', '79.jpg', '80.jpg', '81.jpg');
 INSERT INTO `product` VALUES (16, 'new', '《王国纪元》魔物马克杯套装', '￥129', '神奇的魔物在这里\r\n\r\n游戏: 王国纪元\r\n\r\n材质: 陶瓷、PVC\r\n\r\n商品包含: 2个小肚脐马克杯+3个魔物挂件', '82.jpg', '16', '83.jpg', '84.jpg', '85.jpg');
-
--- ----------------------------
--- Table structure for product_type
--- ----------------------------
-DROP TABLE IF EXISTS `product_type`;
-CREATE TABLE `product_type`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `Product_Types` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of product_type
--- ----------------------------
-INSERT INTO `product_type` VALUES (1, '最新商品');
-INSERT INTO `product_type` VALUES (2, '最热商品');
 
 SET FOREIGN_KEY_CHECKS = 1;

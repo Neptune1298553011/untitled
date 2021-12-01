@@ -1,17 +1,7 @@
 <?php
-
-
-return [
-    'database'=>[
-        'dbname'=>'igg',
-        'username'=>'admin',
-        'password'=>'123456',
-        'connection'=>'localhost:3306',
-        'options'=>[
-
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING
-        ]
-
-]
-];
-
+$conn=mysqli_connect("localhost:3306","admin","123456");
+if(!$conn){
+    die('could not connnect:' .mysqli_error());
+}
+mysqli_query("set name latinl");
+mysqli_select_db("igg",$conn);
