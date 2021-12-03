@@ -30,7 +30,6 @@ require 'rujin.php';
     <link rel="stylesheet" href="<?php echo STYLEPATH ;?>css/layout.css">
     <link rel="stylesheet" href="<?php echo STYLEPATH ;?>css/style.css">
     <!--[if lte IE 9]>
-<!--<link rel="stylesheet" href="/styles/style_ie8.css">-->
 <![endif]-->
 
     <!-- <script src="//statics.igg.com/shop/js/jquery.min.js"></script> -->
@@ -55,8 +54,13 @@ if (empty($id)){
 }
 $controller = new ProductController();
 $respon = $controller->productDetail($id);
-
-
+//
+//$product_id =$_GET['product_id'];
+//if (empty($product_id)){
+//    $product_id = 1;
+//}
+//$controller = new ProductController();
+//$respon = $controller->productDetail($product_id);
 ?>
 
 
@@ -299,7 +303,7 @@ $respon = $controller->productDetail($id);
 
         <h1 class="item-title"> <?php echo $respon->product_name; ?> </h1>
         <h5 class="item-price">
-        <div class="normal-price"> <?php echo $respon->product_price; ?> </div>        </h5>
+        <div class="normal-price"> ￥<?php echo $respon->product_price; ?> </div>        </h5>
 
         
                 <div class="item-star after">

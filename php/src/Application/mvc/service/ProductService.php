@@ -31,17 +31,17 @@ class ProductService2
     }
 }
 
-include_once '../dao/ProductCategoryDao2.php';
-class ProductService3
-{
-    private $categoryDaoHot;
-    public function __construct()
-    {
-        $this->categoryDaoHot = new hotswiperwrapperDao();
-    }
-
-    public function selectById($No)
-    {
-        return $this->categoryDaoHot->selectById($No);
-    }
-}
+//include_once '../dao/ProductCategoryDao2.php';
+//class ProductService3
+//{
+//    private $categoryDaoHot;
+//    public function __construct()
+//    {
+//        $this->categoryDaoHot = new hotswiperwrapperDao();
+//    }
+//
+//    public function selectById($No)
+//    {
+//        return $this->categoryDaoHot->selectById($No);
+//    }
+//}

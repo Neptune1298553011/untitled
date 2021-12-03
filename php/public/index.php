@@ -1,6 +1,5 @@
 <?php
 
-
 function conn(){
     $servername = "localhost:3306";
     $username = "admin";
@@ -15,6 +14,17 @@ function conn(){
     }
 return $conn;
 }
+
+
+$a = 1 ;
+if ($a == "1") {
+    echo "最新";
+} elseif ($a == "2") {
+    echo "最热";
+} else {
+    echo "最新最热";
+}
+
 $conn=conn();
 $sql = "SELECT * FROM product  where product_type='new' limit 4 ";
 $zsresult = $conn->query($sql);
@@ -24,6 +34,13 @@ $conn=conn();
 $sql = "SELECT * FROM product  where product_type='hot' limit 4  ";
 $asresult = $conn->query($sql);
 $conn->close();
+
+$id=1;
+$sql0="SELECT * FROM product WHERE id={$id} ";
+$sql1="SELECT * FROM img where product_id={$id}";
+
+
+
 ?>
 
 <!DOCTYPE html
@@ -332,7 +349,7 @@ $conn->close();
                                         <?php echo $row["product_name"] ?>
                                     </div>
                                     <div class="product-price">
-                                        <?php echo $row["product_price"]; ?>
+                                       ￥ <?php echo $row["product_price"]; ?>
                                     </div>
                                 </div>
                             </a>

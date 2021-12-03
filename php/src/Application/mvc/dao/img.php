@@ -2,13 +2,13 @@
 
 include_once 'SQLSession.php';
 include_once '../model/NewProduct.php';
-class hotswiperwrapperDao
+class imgdao
 {
 
 
-    public function selectById($No){
+    public function selectById($product_id){
         $conn = SQLSession::get_sql_connection();
-        $sql = "select * from hot_swiper_wrapper where  id =" . $No;
+        $sql = "select * from product where  product_id =" . $product_id;
         $result = $conn->query($sql);
 
         if (!$result){
@@ -19,12 +19,11 @@ class hotswiperwrapperDao
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 // todo 通过类构造器获取
-                $temp = new swiper();
-                $temp->No = $row['id'];
-                $temp->img1 = $row['img1'];
-                $temp->img2 = $row['img2'];
-                $temp->img3=$row['img3'];
-                $temp->img4=$row['img4'];
+                $temp = new img();
+                $temp->id = $row['id'];
+                $temp->product_id = $row['product_id'];
+                $temp->product_swiper_wrapper=$row['product_swiper_wrapper'];
+                $temp->product_note_body_img=$row['product_note_body_img'];
                 // 补充属性
                 $response = $temp;
             }

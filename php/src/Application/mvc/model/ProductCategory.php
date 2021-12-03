@@ -15,9 +15,12 @@ class ProductCategory
     public   $create_time;
 
 }
-class ProductCategoryHot
+/**
+ * 图片分类
+ */
+class img
 {
-    public   $id;
+    public   $product_id;
     // 类别
     public   $category_name;
     // 父ID
@@ -25,17 +28,4 @@ class ProductCategoryHot
     public   $category_status;
     // 创建时间
     public   $create_time;
-
-}
-class hotswiperwrapper
-{
-    public   $No;
-    // 类别
-    public   $category_name;
-    // 父ID
-    public   $parent_id;
-    public   $category_status;
-    // 创建时间
-    public   $create_time;
-
 }
